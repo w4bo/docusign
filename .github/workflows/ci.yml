@@ -16,6 +16,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Init
+        run: |
+          cp config.example.yaml config.yaml
+          cp signature.example.png signature.png
+
       - name: Create test PDF
         run: |
           pip install reportlab
