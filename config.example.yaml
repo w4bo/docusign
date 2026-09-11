@@ -1,0 +1,5 @@
+# Signer configuration
+name: "<your name here>"
+# Path to the signature image (PNG with transparent background recommended).
+# Inside Docker this resolves relative to /app (the working directory).
+signature_path: "signature.png"

@@ -1,0 +1,21 @@
+# Signed output — artefacts, not source
+signed/*.pdf
+config.yaml
+signature.png
+# Keep the tosign folder but ignore any actual PDFs committed by accident
+tosign/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db

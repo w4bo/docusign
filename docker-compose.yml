@@ -1,0 +1,14 @@
+services:
+  pdf-signer:
+    build: .
+    volumes:
+      # Mount the whole project so local edits to main.py / config.yaml
+      # are picked up without rebuilding the image.
+      # Packages stay in the image (/usr/local/lib/…) and are NOT overwritten.
+      - .:/app
+
+      # Explicit named sub-mounts are not needed because .:/app already
+      # covers tosign/ and signed/, but they're listed here as documentation:
+      #   tosign/ → put PDFs here before running
+      #   signed/ → signed PDFs appear here after running
+    restart: "no"
