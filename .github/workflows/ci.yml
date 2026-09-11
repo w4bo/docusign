@@ -9,7 +9,6 @@ jobs:
   integration:
     name: Integration
     runs-on: ubuntu-latest
-    needs: docker-build
     steps:
       - uses: actions/checkout@v4
 
