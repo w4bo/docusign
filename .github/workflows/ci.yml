@@ -16,16 +16,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Create dummy signature image
-        run: |
-          cp config.example.yaml config.yaml
-          cp signature.example.png signature.png
-          python3 -c "
-          import base64, pathlib
-          data = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwADhQGAWjR9awAAAABJRU5ErkJggg=='
-          pathlib.Path('signature.png').write_bytes(base64.b64decode(data))
-          "
-
       - name: Create test PDF
         run: |
           pip install reportlab
